@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <Vendor_Overridecontroller>
+         <version>0.0.1</version>
+       </Vendor_Overridecontroller>
+     </modules>
+ 
+   
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Vendor_Overridecontroller before="Mage_Adminhtml">Vendor_Overridecontroller</Vendor_Overridecontroller>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+  
+   <global>
+        <models>
+            <catalog>
+                <rewrite>
+                    <product_visibility>Vendor_Overridecontroller_Model_Product_Visibility</product_visibility>
+                </rewrite>
+            </catalog>
+        </models>
+ 
+       	   
+	
+		    <blocks>
+                    <adminhtml>
+                       <rewrite>
+                           <catalog_product_grid>Vendor_Overridecontroller_Block_Catalog_Product_Grid</catalog_product_grid>
+						   <catalog_product>Vendor_Overridecontroller_Block_Catalog_Product</catalog_product>
+                       </rewrite>
+                    </adminhtml>
+           </blocks>
+     </global>
+
+
+
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <vcatalog_adminhtml_vcatalog_index>
+        <reference name="content">
+            <block type="vcatalog/adminhtml_vcatalog" name="vcatalog" />
+        </reference>
+    </vcatalog_adminhtml_vcatalog_index>
+	
+	<vcatalog_adminhtml_vsubscription_index>
+        <reference name="content">
+            <block type="vcatalog/adminhtml_vsubscription" name="vsubscription" />
+        </reference>
+    </vcatalog_adminhtml_vsubscription_index>
+	
+</layout>

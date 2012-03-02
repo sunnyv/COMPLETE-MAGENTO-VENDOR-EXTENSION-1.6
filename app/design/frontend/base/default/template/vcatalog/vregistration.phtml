@@ -1,0 +1,328 @@
+<style>
+input,select{ border: 1px solid #CCCCCC;}
+#right{ float:right; padding-right:5px;}
+#vendor{ width:50%;}
+</style>
+<span id="right"><a href="<?php echo Mage::getUrl() ?>admin">Already have an account?</a></span>
+<div class="fieldset">
+<h2><div><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div></h2>
+<h1><?php echo $this->__('Vendor Registration') ?></h1>
+<form name="vregistration" id="vregistration" method="post" action="<?php echo Mage::getUrl('vregistration/index/create') ?>">
+
+<ul class="form-list">  
+   <li>
+      <label class="required" for="country"><em>*</em>Business Category</label>
+        <div class="input-box">
+	   <select id="business_category" name="business_category" class="validate-select">
+	    <option value="">Please Select</option>	
+		 <option value="16">Band</option>
+	    <option value="16">Beauty &amp; Health</option>
+        <option value="3">Catering</option>
+        <option value="11">Ceremony &amp; Reception Venue</option>
+        <option value="4">Ceremony Music</option>
+        <option value="7">DJ</option>
+        <option value="17">Dress &amp; Attire</option>
+        <option value="21">Entertainer</option>
+        <option value="24">Event Production</option>
+        <option value="12">Event Rentals</option>
+        <option value="5">Favors &amp; Gifts</option>
+        <option value="8">Flowers &amp; Decor</option>
+        <option value="18">Invitations</option>
+        <option value="19">Jewelry</option>
+        <option value="9">Officiant</option>
+        <option value="22">Party Supplies</option>
+        <option value="10">Photography</option>
+        <option value="13">Transportation</option>
+        <option value="23">Travel</option>
+        <option value="20">Unique Services (Other)</option>
+        <option value="14">Videography</option>
+        <option value="2">Wedding Cake</option>
+        <option value="15">Wedding Planning</option>
+	   </select>
+	   </div>
+     </li>
+    
+	   
+	
+	   <li>
+         <label class="required" for="prenom">Region</label>
+        <div class="input-box">
+		  <select  id="region" name="region" class="validate-select">
+			    <option value="">Please Select</option>	
+			    <option value="AG">AG - Antigua + Barbuda</option>
+				<option value="AI">AI - Anguilla</option>
+				<option value="743">AK - Anchorage, Fairbanks, and surrounding areas</option>
+				<option value="630">AL - Birmingham, Huntsville, Tuscaloosa, and surrounding areas</option>
+				<option value="686">AL - Mobile, Pensacola, Panama City, and surrounding areas</option>
+				<option value="698">AL - Montgomery, Dothan, and surrounding areas</option>
+				<option value="693">AR - Little Rock and surrounding areas</option>
+				<option value="AS">AS - American Samoa</option>
+				<option value="AW">AW - Aruba</option>
+				<option value="753">AZ - Phoenix and surrounding areas</option>
+				<option value="789">AZ - Tucson and surrounding areas</option>
+				<option value="BB">BB - Barbados</option>
+				<option value="BC">BC - British Columbia</option>
+				<option value="BD">BD - Bermuda</option>
+				<option value="BL">BL - St. Barts</option>
+				<option value="BS">BS - Bahamas</option>
+				<option value="803A">CA - Los Angeles County and surrounding areas</option>
+				<option value="807M">CA - Monterey and surrounding areas</option>
+				<option value="807N">CA - Napa Valley and surrounding areas</option>
+				<option value="803B">CA - Orange County, Riverside, San Bernardino, and surrounding areas</option>
+				<option value="862">CA - Sacramento, Modesto, Fresno, and surrounding areas</option>
+				<option value="825">CA - San Diego and surrounding areas</option>
+				<option value="807">CA - San Francisco, San Jose, Oakland, and surrounding areas</option>
+	    		<option value="803C">CA - Santa Barbara, Ventura, San Luis Obispo, and surrounding areas</option>
+		    	<option value="CJ">CJ - Cayman Islands</option>
+				<option value="751">CO - Denver, Colorado Springs, Grand Junction, and surrounding areas</option>
+				<option value="533">CT - Hartford, New Haven, and surrounding areas</option>
+				<option value="511">DC - Washington DC, Maryland, Northern Virginia, and surrounding areas</option>
+				<option value="550">DE - Dover, Wilmington, DE/MD Beaches, and surrounding areas</option>
+				<option value="DO">DO - Dominican Republic</option>
+				<option value="ES">ES - Spain</option>
+				<option value="571">FL - Fort Myers, Naples, and surrounding areas</option>
+				<option value="561">FL - Jacksonville, Brunswick, and surrounding areas</option>
+				<option value="528">FL - Miami, Ft. Lauderdale, West Palm Beach, and surrounding areas</option>
+				<option value="534">FL - Orlando, Daytona Beach, and surrounding areas</option>
+				<option value="530">FL - Tallahassee, Thomasville, and surrounding areas</option>
+				<option value="539">FL - Tampa, St. Petersburg, Sarasota, and surrounding areas</option>
+				<option value="528K">FL - The Florida Keys and surrounding areas</option>
+				<option value="FR">FR - France</option>
+				<option value="524">GA - Atlanta and surrounding areas</option>
+				<option value="522">GA - Columbus and surrounding areas</option>
+				<option value="507">GA - Savannah and surrounding areas</option>
+				<option value="GB">GB - United Kingdom</option>
+				<option value="GD">GD - Grenada</option>
+				<option value="GR">GR - Greece</option>
+				<option value="GU">GU - Guam</option>
+				<option value="744">HI - Honolulu and surrounding areas</option>
+				<option value="637">IA - Cedar Rapids, Davenport, Mason City, and surrounding areas</option>
+				<option value="679">IA - Des Moines, Sioux City, and surrounding areas</option>
+				<option value="757">ID - Boise, Idaho Falls, Twin Falls, and surrounding areas</option>
+				<option value="602">IL - Chicago, Rockford, South Bend, and surrounding areas</option>
+     			<option value="648">IL - Springfield, Champaign, Peoria, and surrounding areas</option>
+				<option value="527">IN - Indianapolis, Lafayette, Terre Haute, and surrounding areas</option>
+				<option value="IT">IT - Italy</option>
+				<option value="JM">JM - Jamaica</option>
+				<option value="605">KS - Topeka and surrounding areas</option>
+				<option value="678">KS - Wichita and surrounding areas</option>
+				<option value="541">KY - Lexington, Louisville, and surrounding areas</option>
+				<option value="632">KY - Paducah, Bowling Green, and surrounding areas</option>
+				<option value="622">LA - New Orleans, Baton Rouge, Lafayette, and surrounding areas</option>
+				<option value="612">LA - Shreveport, Monroe, and surrounding areas</option>
+				<option value="LC">LC - St. Lucia</option>
+				<option value="506">MA - Boston, Watertown, Waltham, and surrounding areas</option>
+				<option value="543">MA - Springfield, Holyoke, and surrounding areas</option>
+				<option value="MB">MB - Manitoba</option>
+				<option value="512">MD - Baltimore and surrounding areas</option>
+				<option value="500">ME - Portland, Bangor, Presque Isle, and surrounding areas</option>
+				<option value="MF">MF - St. Martin + St. Maarten</option>
+				<option value="MH">MH - Marshall Islands</option>
+				<option value="505">MI - Detroit, Flint, and surrounding areas</option>
+				<option value="563">MI - Grand Rapids, Kalamazoo, Lansing, and surrounding areas</option>
+				<option value="613">MN - Minneapolis, St. Paul, and surrounding areas</option>
+				<option value="616">MO - Kansas City, St. Joseph, and surrounding areas</option>
+				<option value="619">MO - Springfield, Joplin, Pittsburg, and surrounding areas</option>
+				<option value="609">MO - St. Louis, Columbia, Jefferson City, and surrounding areas</option>
+				<option value="MP">MP - Northern Mariana Islands</option>
+				<option value="718">MS - Jackson, Biloxi, Columbus, and surrounding areas</option>
+				<option value="756">MT - Billings, Butte, Helena, and surrounding areas</option>
+				<option value="MXEAST">MX - Eastern Mexico and surrounding areas</option>
+				<option value="MXWEST">MX - Western Mexico and surrounding areas</option>
+				<option value="NB">NB - New Brunswick</option>
+				<option value="517">NC - Charlotte, Asheville, and surrounding areas</option>
+				<option value="560B">NC - Outer Banks and surrounding areas</option>
+				<option value="560">NC - Raleigh-Durham, Greensboro, Winston-Salem, and surrounding areas</option>
+				<option value="724">ND - Bismarck, Fargo, and surrounding areas</option>
+				<option value="722">NE - Lincoln, Omaha, North Platte, and surrounding areas</option>
+				<option value="501A">NJ - Northern New Jersey and surrounding areas</option>
+				<option value="501S">NJ - Southern New Jersey and surrounding areas</option>
+				<option value="NL">NL - Newfoundland and Labrador</option>
+				<option value="790">NM - Albuquerque, Santa Fe, and surrounding areas</option>
+				<option value="NS">NS - Nova Scotia</option>
+				<option value="NT">NT - Northwest Territories</option>
+				<option value="NU">NU - Nunavut</option>
+				<option value="839">NV - Las Vegas and surrounding areas</option>
+				<option value="811">NV - Reno, Lake Tahoe, and surrounding areas</option>
+				<option value="532">NY - Albany, Schenectady, Troy, and surrounding areas</option>
+				
+				<option value="514">NY - Buffalo, Rochester, and surrounding areas</option>
+				<option value="501C">NY - Long Island and surrounding areas</option>
+				<option value="501B">NY - New York, Manhattan, Brooklyn, Bronx, Queens, and surrounding areas</option>
+				<option value="555">NY - Syracuse, Binghamton, Utica, and surrounding areas</option>
+				<option value="501D">NY - Westchester, Western Connecticut, and surrounding areas</option>
+				<option value="515">OH - Cincinnati, Dayton, and surrounding areas</option>
+				<option value="510">OH - Cleveland, Erie, Toledo, and surrounding areas</option>
+				<option value="535">OH - Columbus, Lima, Zanesville, and surrounding areas</option>
+				<option value="650">OK - Oklahoma City, Ada, Ardmore, and surrounding areas</option>
+				
+				<option value="671">OK - Tulsa and surrounding areas</option>
+				<option value="ON">ON - Ontario</option>
+				<option value="801">OR - Eugene, Bend, Medford, and surrounding areas</option>
+				<option value="820">OR - Portland and surrounding areas</option>
+				<option value="566">PA - Lancaster, Harrisburg, York, and surrounding areas</option>
+				<option value="504">PA - Philadelphia, Lehigh Valley, and surrounding areas</option>
+				<option value="508">PA - Pittsburgh, Wheeling, and surrounding areas</option>
+				<option value="577">PA - Scranton, Poconos, and surrounding areas</option>
+				<option value="PE">PE - Prince Edward Island</option>
+				<option value="PF">PF - Tahiti</option>
+				<option value="PR">PR - Puerto Rico</option>
+				<option value="PT">PT - Portugal</option>
+				<option value="PW">PW - Palau</option>
+				<option value="QC">QC - Quebec</option>
+				<option value="521">RI - Providence, New Bedford, and surrounding areas</option>
+				<option value="570">SC - Charleston, Florence, Myrtle Beach, and surrounding areas</option>
+				<option value="546">SC - Columbia, Greenville, and surrounding areas</option>
+				<option value="570H">SC - Hilton Head and surrounding areas</option>
+				<option value="725">SD - Sioux Falls, Rapid City, and surrounding areas</option>
+				<option value="SK">SK - Saskatchewan</option>
+				<option value="TC">TC - Turks + Caicos</option>
+				<option value="557">TN - Knoxville, Chattanooga, Tri-Cities, and surrounding areas</option>
+				<option value="640">TN - Memphis, Jackson, Jonesboro, and surrounding areas</option>
+				<option value="659">TN - Nashville and surrounding areas</option>
+				<option value="635">TX - Austin and surrounding areas</option>
+				<option value="623">TX - Dallas, Ft. Worth, Wichita Falls, and surrounding areas</option>
+				<option value="765">TX - El Paso, Amarillo, Odessa, and surrounding areas</option>
+				<option value="618">TX - Houston, Beaumont, and surrounding areas</option>
+				<option value="641">TX - San Antonio, Corpus Christi, and surrounding areas</option>
+				<option value="770">UT - Salt Lake City and surrounding areas</option>
+				<option value="556">VA - Richmond, Norfolk, and surrounding areas</option>
+				<option value="VI">VI - Virgin Islands</option>
+				<option value="523">VT - Burlington, Plattsburgh, and surrounding areas</option>
+				<option value="819">WA - Seattle-Tacoma and surrounding areas</option>
+				<option value="881">WA - Spokane, Yakima, and surrounding areas</option>
+				<option value="617">WI - Milwaukee, Green Bay, Madison, and surrounding areas</option>
+				<option value="564">WV - Charleston and surrounding areas</option>
+				<option value="767">WY - Cheyenne, Casper, and surrounding areas</option>
+				<option value="YT">YT - Yukon</option>
+		  </select>
+		</div> 
+       </li>
+	  
+	 
+	  
+	   <li>
+        <label class="required" for="nom">Country</label>
+          <div class="input-box">
+		  <select id="country" name="country" class="validate-select">
+			   <option value="">---North America---</option>
+			   <option value="CA"> Canada</option>
+			   <option value="MX"> Mexico</option>
+			   <option value="US"> United States</option>
+			   <option value="">---Caribbean---</option>
+			   <option value="AG"> Antigua + Barbuda</option>
+			   <option value="AI"> Anguilla</option>
+			   <option value="AW"> Aruba</option>
+			   <option value="BB"> Barbados</option>
+			   <option value="BD"> Bermuda</option>
+			   <option value="BL"> St. Barts</option>
+			   <option value="BS"> Bahamas</option>
+			   <option value="CJ"> Cayman Islands</option>
+			   <option value="DO"> Dominican Republic</option>
+			   <option value="GD"> Grenada</option>
+			   <option value="JM"> Jamaica</option>
+			   <option value="LC"> St. Lucia</option>
+			   <option value="MF"> St. Martin + St. Maarten</option>
+			   <option value="TC"> Turks + Caicos</option>
+			   <option value="">---Europe---</option>
+			   <option value="ES"> Spain</option>
+			   <option value="FR"> France</option>
+			   <option value="GB"> United Kingdom</option>
+			   <option value="GR"> Greece</option>
+			   <option value="IT"> Italy</option>
+			   <option value="PT"> Portugal</option>
+			   <option value="">---South Pacfic---</option>
+			   <option value="PF"> Tahiti</option>
+		  </select>
+       </div>
+    </li>
+	
+	 
+
+	 
+	  <li>
+        <label class="required" for="nom">Business Name</label>
+        <div class="input-box">
+		<input size="45" type="text" id="business_name" name="business_name" class="input-text  required-entry" />
+       </div>
+	</li>
+	
+
+	
+	<li>
+        <label class="required" for="nom">Business Phone Number</label>
+        <div class="input-box">
+		<input size="45" type="text" id="business_phone_number" name="business_phone_number" class="input-text  required-entry"/>
+        </div>
+	</li>
+	
+	
+	
+	<li>
+        <label class="required" for="nom">Postal Code</label>
+        <div class="input-box">
+		<input size="45" type="text" id="postal_code" name="postal_code" class="input-text  required-entry" />
+        </div>
+    </li>
+    
+	   
+	 <li>
+      <label class="required" for="Find_Feed">User Name</label>	
+       <div class="input-box">
+	  <input size="45" type="text" id="username" name="username" class="input-text  required-entry" />
+       </div>
+	 </li>
+	
+	
+	
+	   <li>
+      <label class="required" for="Find_Feed">First Name</label>	
+       <div class="input-box">
+	  <input size="45" type="text" id="first_name" name="first_name" class="input-text  required-entry" />
+       </div>
+	 </li>
+	
+    <li>
+        <label class="required" for="nom">Last Name</label>
+        <div class="input-box">
+	    <input size="45" type="text" id="last_name" name="last_name" class="input-text  required-entry" />
+        </div>
+   </li>
+ 
+	
+	<li>
+        <label class="required" for="nom">Email Address</label>
+        <div class="input-box">
+		<input size="45" type="text" id="eaddr" name="eaddr" class="input-text required-entry validate-email" />
+        </div>
+	</li>
+	
+	<li>
+        <label class="required" for="nom">Password</label>
+        <div class="input-box">
+	    <input size="45" type="password" id="password" name="password" class="input-text required-entry validate-password" />
+        </div>
+    </li>
+	
+	<li>
+        <label class="required" for="nom">Confirm Password</label>
+          <div class="input-box">
+		<input size="45" type="password" id="confirm_password" name="confirm_password" class="input-text required-entry validate-cpassword"/>
+         </div>
+    </li>
+	
+	 <li>
+       <div style="width:20%" class="buttons-set">
+                <button class="button validation-passed" title="Submit" type="submit"><span><span>Submit</span></span></button>
+       </div>
+    </li>
+  </ul>
+
+</form>
+</div>
+<script type="text/javascript">
+//< ![CDATA[
+var customForm = new VarienFormaaaaaaa('vregistration');
+//]]>
+</script>
+

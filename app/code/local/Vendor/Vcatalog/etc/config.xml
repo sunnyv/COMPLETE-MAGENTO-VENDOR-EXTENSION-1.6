@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vendor_Vcatalog>
+            <version>0.1.0</version>
+        </Vendor_Vcatalog>
+    </modules>
+    <frontend>
+        <routers>
+            <vcatalog>
+                <use>standard</use>
+                <args>
+                    <module>Vendor_Vcatalog</module>
+                    <frontName>vregistration</frontName>
+                </args>
+            </vcatalog>
+        </routers>
+        <layout>
+            <updates>
+                <vcatalog>
+                    <file>vcatalog.xml</file>
+                </vcatalog>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<vcatalog>
+				<use>admin</use>
+				<args>
+					<module>Vendor_Vcatalog</module>
+					<frontName>vcatalog</frontName>
+				</args>
+			</vcatalog>
+        </routers>
+    </admin>
+    <adminhtml>
+		<!--<menu>
+			<vcatalog module="vcatalog">
+				<title>Vcatalog</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="vcatalog">
+						<title>Manage Items</title>
+						<sort_order>0</sort_order>
+						<action>vcatalog/adminhtml_vcatalog</action>
+					</items>
+					
+					<items_1 module="vcatalog">
+						<title>Manage Subscription</title>
+						<sort_order>1</sort_order>
+						<action>vcatalog/adminhtml_vsubscription</action>
+					</items_1>
+				</children>
+				
+				
+			
+			</vcatalog>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Vendor_Vcatalog>
+							<title>Vcatalog Module</title>
+							<sort_order>10</sort_order>
+						</Vendor_Vcatalog>
+					</children>
+				</admin>
+			</resources>
+		</acl>-->
+		<layout>
+			<updates>
+				<vcatalog>
+					<file>vcatalog.xml</file>
+				</vcatalog>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+             <vcatalog>
+                  <class>Vendor_Vcatalog_Model</class>
+                  <resourceModel>vcatalog_mysql4</resourceModel>
+			 </vcatalog>
+			          
+   	    <vcatalog_mysql4>
+                <class>Vendor_Vcatalog_Model_Mysql4</class>
+                <entities>
+                    <vcatalog>
+                        <table>vcatalog</table>
+				   </vcatalog>
+          		    <vinfo>
+				       <table>vinfo</table>
+				   </vinfo>
+				   <vsubscription>
+				       <table>vsubscription</table>
+				  </vsubscription>
+				   <vpaymentinfo>
+				       <table>vpaymentinfo</table>
+				  </vpaymentinfo>
+				  <vprelation>
+				       <table>vprelation</table>
+				  </vprelation>
+			</entities>
+    	</vcatalog_mysql4>
+      </models>
+   
+      <events>
+        	<catalog_product_save_after>
+        		<observers>
+                    <vendor_vcatalog_authenticate>
+                        <type>singleton</type>
+                        <class>Vendor_Vcatalog_Model_Observer</class>
+                        <method>updatevEndorProfileStatus</method>
+                    </vendor_vcatalog_authenticate>
+                </observers>
+        	</catalog_product_save_after>
+        </events>	
+   
+   
+        <resources>
+            <vcatalog_setup>
+                <setup>
+                    <module>Vendor_Vcatalog</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vcatalog_setup>
+            <vcatalog_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vcatalog_write>
+            <vcatalog_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vcatalog_read>
+        </resources>
+        <blocks>
+            <vcatalog>
+                <class>Vendor_Vcatalog_Block</class>
+            </vcatalog>
+        </blocks>
+        <helpers>
+            <vcatalog>
+                <class>Vendor_Vcatalog_Helper</class>
+            </vcatalog>
+        </helpers>
+    </global>
+</config>
