@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+        <menu>
+			<vcatalog module="vcatalog">
+				<title>Vcatalog</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="vcatalog">
+						<title>Manage Items</title>
+						<sort_order>0</sort_order>
+						<action>vcatalog/adminhtml_vcatalog</action>
+					</items>
+					
+					<items_1 module="vcatalog">
+						<title>Manage Subscription</title>
+						<sort_order>1</sort_order>
+						<action>vcatalog/adminhtml_vsubscription</action>
+					</items_1>
+				</children>
+			</vcatalog>
+		</menu>
+		
+		<acl>
+		  <resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+		    <admin>
+				<children>
+			         <vcatalog module="vcatalog">
+				        <title>Vcatalog</title>
+				         <sort_order>71</sort_order>               
+				           <children>
+								<items module="vcatalog">
+								<title>Manage Items</title>
+								 <sort_order>0</sort_order>
+								</items>
+								
+								<items_1 module="vcatalog">
+								<title>Manage Subscription</title>
+								<sort_order>1</sort_order>
+								</items_1>
+				           </children>
+			          </vcatalog>
+	           	</children>
+			</admin>
+		</resources>
+		</acl>
+</config>

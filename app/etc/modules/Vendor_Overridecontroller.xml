@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vendor_Overridecontroller>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Vendor_Overridecontroller>
+    </modules>
+</config> 
